@@ -66,7 +66,7 @@ Notes:
 * If program fails to run due to PyTorch dependency issue:
 	* Ensure the correct package install command was used for your specific system OS and platform.
 	* To verify which install command to use, go to:
-	* [](https://pytorch.org/get-started/locally/)
+	* https://pytorch.org/get-started/locally/
 
 ## Hardware & System Requirements:
 
