@@ -2,9 +2,8 @@ Original work Copyright (c) 2021 David Locarno
 
 # GAME DESCRIPTION
 
-AI RACER started as a simple 2D racing game built in the Pygame framework. A player can easily add/modify game levels and race
-a number of NPCs around a track.  Later, Deep-Q Reinforcment Learning via the PyTorch framework, has been added to the game
-to allow a player to test, tune, train, and play with a Deep Q Learning Network.
+AI RACER started as a simple 2D racing game built in the Pygame framework. A player can easily add/modify game levels and race a number of NPCs around a track.  
+Later, Deep-Q Reinforcment Learning via the PyTorch framework, was added to the game to allow a player to test, tune, train, and play with a Deep Q Learning Network.
 
 # PURPOSE
 
@@ -80,13 +79,11 @@ Memory:	32 GB RAM
 
 ## Final notes on game performance:
 
-Training a Deep Q Neural Network is inherently computationally expensive.  The  source code will attempt to perform these computations on
-the devices GPU via use of the PyTorch framework.  If a GPU is not available, the CPU is then selected as the device. How 
-quickly the DQN trains will be dependent on the performance of the underlying hardware performing the backpropegation calculations.
+Training a Deep Q Neural Network is inherently computationally expensive.  The  source code will attempt to perform these computations on the devices GPU via use of the PyTorch framework.
+If a GPU is not available, the CPU is then selected as the device. How quickly the DQN trains will be dependent on the performance of the underlying hardware performing the backpropegation calculations.
 
-It was observed that game levels created over a certian size would significantly reduce performance during play.  If attempts are made
-to make a new level (racetrack) for the game, care must be taken to limit the maximum size (pixels) of the level image.  Additionally,
-attempting to render a level with too much detail or number of colors could also impact perfomance to the point of making the game unplayable.
+It was observed that game levels created over a certian size would significantly reduce performance during play. If attempts are made to make a new level (racetrack) for the game, care must be taken to limit the maximum size (pixels) of the level image.  
+Additionally, attempting to render a level with too much detail or number of colors could also impact perfomance to the point of making the game unplayable.
 
 # OTHER NOTEWORTHY DIRECTORIES, FEATURES, & TOOLS
 1. The /game/race/levels/ directory contains each of the game's levels and associated level configuration files.
