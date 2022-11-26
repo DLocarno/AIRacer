@@ -21,7 +21,7 @@ calculations, therefore, the user gets a more complete "grasp" of implementing a
 * To check installed Python version, opend cmd prompt and enter:
 	* python - V
 * Or, to install Python, download at: 
-	* [](https://www.python.org/downloads/)
+	* https://www.python.org/downloads/
 * If pip is not installed, open cmd prompt and install pip on windows with:
 	* curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
 	* python get-pip.py
