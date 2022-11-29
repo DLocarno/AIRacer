@@ -66,7 +66,7 @@ class Level(ImageObject):
         # Pygame functions to convert the level image and create a mask of image used for collision detect with the level--
         # Set level background color & onvert alpha
         self.image.set_colorkey("white")
-        self.image.convert_alpha()
+        self.image.convert()
         # Set mask color used for level boundary (level collision color read from data file)
         #Note: Second argument is a color sensitivity threshold--could need adjusment
         self.mask = pygame.mask.from_threshold(self.image, pygame.Color(self.level_boundary_color), (1,1,1,1))

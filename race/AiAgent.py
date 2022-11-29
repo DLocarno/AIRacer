@@ -88,7 +88,7 @@ class AiAgent(ImageObject):
         # Whether the agent will be performing training or not (Backprop vs. feed-forward only)
         self.train = self.game.ai_train
         if self.train == False:
-            self.epsilon = 0    # since no training, don't select actions randomly
+            self.epsilon = 0        # since no training, don't select actions randomly
         
     # 'update' controls the AI agent's overall operational sequence & 
     # timing of each function via its method calls & a time-step counter.
@@ -102,7 +102,7 @@ class AiAgent(ImageObject):
             self.nn_inputs.append(self.player_car.distance)             # Add the player car's current speed as the final parameter to the input list
             if self.time_step % self.step_frequency == 0:
                 self.act()
-            self.time_step += 0
+            self.time_step += 1
             return
         
         # DQN control w/complete training sequence (back-propegation)

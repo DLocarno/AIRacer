@@ -56,8 +56,8 @@ class CollisionManager:
         y = obj.rect.y
         # 20 px rect offsets used in the calc 
         #(This would be dependent on image size of the car/player, fortunately, they're all the same size).
-        X = 20                 
-        Y = 20
+        X = 30                 
+        Y = 30
         
         # Check to see if a collision exists
         self.level_calc_offset(obj)
@@ -110,8 +110,8 @@ class CollisionManager:
         rect2 = obj2.rect
 
         # Rect offset constants again (again may need to be changed depending on sprite image size)
-        X = 50
-        Y = 50
+        X = 60
+        Y = 60
         # Calc the offset of the image masks
         self.player_detect_collision(rect1, rect2)
         

@@ -49,7 +49,6 @@ class PlayerView:
     # Constructs the player's viewport by appending map and all game objects to correct surfaces
     # (updates image buffer)
     def display_viewport(self):
-
         self.viewport.blit(self.level_image, (self.x, self.y))                              # draw the level image to viewport
         self.level_image.blit(self.finish_line.finish_line, self.finish_line.coords)        # draw the finsih line to the level image
         self.viewport.blit(self.player.image, (self.player_offset_x, self.player_offset_y)) # draw car to center of viewport

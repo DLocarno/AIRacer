@@ -18,7 +18,7 @@ class Main:
         sys.setrecursionlimit(100000)
     
         self.name = "AI RACER"
-        self.FPS = 140  # 120 to 140 FPS Reccommended, 60 FPS minimum, NOTE: If altered, may also have to adjust player and NPC attributes accordingly
+        self.FPS = 50  # 40-80 FPS range recommended, !!! NOTE: If altered too much, may also have to adjust player and NPC attributes accordingly!!!
         self.WIDTH = 1500
         self.HEIGHT = 1100
         self.colors = {"red": (255,0,0), "green": (0,128,0), "blue": (0,0,255), "black": (0,0,0), "white": (255,255,255), 
@@ -67,12 +67,12 @@ class Main:
     def init_player_attributes(self, player_selection, player_start_coords):
         # Set all attributes for the player
         player_attributes = {"IMAGE_FILE": player_selection, # sprite image file
-                                  "MAX_SPEED": 150,         # Range 110 -200
-                                  "ACCEL": .7,              # Range .5 - 7
-                                  "HANDLING": 1,            # Range 1 - 2.5  
-                                  "DECELERATION": .02,      # .05
-                                  "E_BRAKE_DECEL": .07,     # .175
-                                  "E_BRAKE_HANDLING": 2.5,  # 4.25
+                                  "MAX_SPEED": 350,         # Range 150 - 380
+                                  "ACCEL": 2.9,             # Range .5 - 6
+                                  "HANDLING": 3.15,         # Range 1.5 - 3.5  
+                                  "DECELERATION": .025,     # .025
+                                  "E_BRAKE_DECEL": .075,    # .075
+                                  "E_BRAKE_HANDLING": 4,    # 4
                                   "HEALTH": 100,            # Not currently used
                                   "BOOST": 0,               # Not currently used
                                   "START_COORDS": (player_start_coords[0], player_start_coords[1], player_start_coords[2])} # x, y, & angle coords
@@ -82,9 +82,9 @@ class Main:
     # A range is used instead of a single value to, which helps establish psudo-randomness 
     # between different NPCs. To make NPC's more challenging, increase attribute values / adjust the range
     def init_npc_attributes(self, npc_car_images, npcs, npc_start_coords, npc_waypoints ):
-        npc_attributes = {"MAX_SPEED": (10,15),
-                               "ACCEL": (.004, .06),     
-                               "HANDLING": (.5, 1),  
+        npc_attributes = {"MAX_SPEED": (25,35),
+                               "ACCEL": (.025, .05),     
+                               "HANDLING": (2, 3),  
                                "DECELERATION": .025,
                                "IMAGE_FILES": npc_car_images,
                                "NPCS": npcs,

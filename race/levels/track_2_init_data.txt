@@ -29,7 +29,7 @@
 # 
 # No. Laps needed to finish:
 3
-# Level Boundary/Collision Color: (green)
+# Level Boundary/Collision Color: (light green)
 (34,177,76)
 # Level Finish Line Coords:
 (95, 3450, 965, 170, 110, (204, 204, 0))

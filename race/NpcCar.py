@@ -158,13 +158,13 @@ class NpcCar(ImageObject):
             # If diff is a negative, the waypoint is to the left of the current NPC heading
             # (NPC must turn right), else, if positive, it's to the right (NPC must turn left).
             diff = ((self.angle - deg + 180) % 360) - 180   # Oh no, its.....MATH!!!               
-            # "deadband" of 1 degree used so the NPC car doesn't "jitter" from right to
+            # "deadband" of 1.5 degree used so the NPC car doesn't "jitter" from right to
             # left as it constantly attempts to control to too precise of an angle
             deadband = abs(diff)
             # Finally, we can update the left or right turn signal, accordingly to correct heading.
-            if diff < 0 and deadband > 1:
+            if diff < 0 and deadband > 1.5:
                 self.angle += 1 * self.handling
-            elif diff > 0 and deadband > 1:
+            elif diff > 0 and deadband > 1.5:
                 self.angle -= 1 * self.handling
         # normalize (updated) car angle between 0 and 360 degrees
         self.angle = self.angle % 360           
